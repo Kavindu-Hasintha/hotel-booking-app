@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "9d7a54e9-3742-43c9-98a9-a1013e6c94dc",
+		"name": "Hotel Booking App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20980172"
+	},
+	"item": [
+		{
+			"name": "Rooms",
+			"item": [
+				{
+					"name": "Add a new room",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/D:/Spring Boot/Hotel Booking App/Project/Images/Single bed room-1.jpg"
+								},
+								{
+									"key": "roomType",
+									"value": "Single bed room",
+									"type": "text"
+								},
+								{
+									"key": "roomPrice",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9192/rooms/add/new-room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"rooms",
+								"add",
+								"new-room"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
