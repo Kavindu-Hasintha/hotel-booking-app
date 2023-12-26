@@ -52,6 +52,36 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get room types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9192/rooms/room-types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"rooms",
+								"room-types"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
