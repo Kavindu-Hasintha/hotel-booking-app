@@ -54,7 +54,7 @@
 					"response": []
 				},
 				{
-					"name": "Get room types",
+					"name": "Get all room types",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -78,6 +78,65 @@
 							"path": [
 								"rooms",
 								"room-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all rooms",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9192/rooms/all-rooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"rooms",
+								"all-rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete room by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:9192/rooms/delete/room/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"rooms",
+								"delete",
+								"room",
+								"5"
 							]
 						}
 					},
