@@ -1,12 +1,22 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./components/home/Home";
 import AddRoom from "./components/room/AddRoom";
 import ExsitingRooms from "./components/room/ExsitingRooms";
+import EditRoom from "./components/room/EditRoom";
 
 function App() {
   return (
     <>
-      <AddRoom />
-      <ExsitingRooms />
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/edit-room/:roomId" element={<EditRoom />} />
+            <Route path="/existing-rooms" element={<ExsitingRooms />} />
+          </Routes>
+        </BrowserRouter>
+      </main>
     </>
   );
 }

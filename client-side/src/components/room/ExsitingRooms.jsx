@@ -4,7 +4,7 @@ import { Col } from "react-bootstrap";
 import { FaEdit, FaEye, FaTrashAlt } from "react-icons/fa";
 import RoomFilter from "../common/RoomFilter";
 import RoomPaginator from "../common/RoomPaginator";
-import { deleteRoom } from "../utils/ApiFunctions";
+import { deleteRoom, getAllRooms } from "../utils/ApiFunctions";
 import { Link } from "react-router-dom";
 
 const ExsitingRooms = () => {
@@ -26,10 +26,10 @@ const ExsitingRooms = () => {
     try {
       const result = await getAllRooms();
       setRooms(result);
-      setIsLoading(false);
     } catch (error) {
       setErrorMessage(error.message);
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
