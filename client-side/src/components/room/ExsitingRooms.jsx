@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Col } from "react-bootstrap";
-import { FaEdit, FaEye, FaTrashAlt } from "react-icons/fa";
+import { Col, Row } from "react-bootstrap";
+import { FaEdit, FaEye, FaPlus, FaTrashAlt } from "react-icons/fa";
 import RoomFilter from "../common/RoomFilter";
 import RoomPaginator from "../common/RoomPaginator";
 import { deleteRoom, getAllRooms } from "../utils/ApiFunctions";
@@ -86,9 +86,16 @@ const ExsitingRooms = () => {
             <div className="d-flex justify-content-center mb-3 mt-5">
               <h2>Existing rooms</h2>
             </div>
-            <Col md={6} className="mb-3 mb-md-0">
-              <RoomFilter data={rooms} setFilteredData={setFilteredRooms} />
-            </Col>
+            <Row className="d-flex align-items-center">
+              <Col md={6} className="mb-3 mb-md-0">
+                <RoomFilter data={rooms} setFilteredData={setFilteredRooms} />
+              </Col>
+              <Col md={6} className="d-flex justify-content-end mb-3 mb-md-0">
+                <Link to={"/add-room"}>
+                  <FaPlus /> Add Room
+                </Link>
+              </Col>
+            </Row>
 
             <table className="table table-bordered table-hover">
               <thead>
