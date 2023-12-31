@@ -1,2 +1,2 @@
 #  Hotel Booking App
-##  Technologies: ReactJS, Spring Boot, MSSQL
+##  Technologies: ReactJS, Spring Boot, MySQL
