@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -26,7 +26,7 @@ const NavBar = () => {
               <NavLink
                 className="nav-link"
                 aria-current="page"
-                to={"/browse-all-rooms"}
+                to="/browse-all-rooms"
               >
                 Browse all rooms
               </NavLink>
@@ -43,9 +43,9 @@ const NavBar = () => {
                 Find My Booking
               </NavLink>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDarkDropdownMenuLink"
                 role="button"
@@ -55,7 +55,7 @@ const NavBar = () => {
                 Account
               </a>
               <ul
-                class="dropdown-menu dropdown-menu-dark"
+                className="dropdown-menu dropdown-menu-dark"
                 aria-labelledby="navbarDarkDropdownMenuLink"
               >
                 <li>
