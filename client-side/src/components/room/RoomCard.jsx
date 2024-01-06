@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const RoomCard = ({ room }) => {
   return (
     <Col key={room.id} className="mb-4" xs={12}>
+      <h2>Hiiii</h2>
       <Card>
         <Card.Body className="d-flex flex-wrap align-items-center">
           <div className="flex-shrink-0 mr-3 mb-3 mb-md-0">
