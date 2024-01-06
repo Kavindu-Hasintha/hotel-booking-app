@@ -1,6 +1,14 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { FaClock, FaWifi } from "react-icons/fa";
+import {
+  FaClock,
+  FaCocktail,
+  FaParking,
+  FaSnowflake,
+  FaTshirt,
+  FaUtensils,
+  FaWifi,
+} from "react-icons/fa";
 import Header from "./Header";
 
 const HotelService = () => {
@@ -27,7 +35,70 @@ const HotelService = () => {
                   <FaWifi /> WiFi
                 </Card.Title>
                 <Card.Text>
-                  Stay connected with high-speed internet access
+                  Stay connected with high-speed internet access.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title className="hotel-color">
+                  <FaUtensils /> Breakfast
+                </Card.Title>
+                <Card.Text>Star</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title className="hotel-color">
+                  <FaTshirt /> Laundry
+                </Card.Title>
+                <Card.Text>
+                  Keep your clothes clean and fresh with our laundry service.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title className="hotel-color">
+                  <FaCocktail /> Mini-bar
+                </Card.Title>
+                <Card.Text>
+                  Enjoy a refreshing drink or snack from our in-room mini-bar.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title className="hotel-color">
+                  <FaParking /> Parking
+                </Card.Title>
+                <Card.Text>
+                  Park your car conveniently in our on-site parking lot.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title className="hotel-color">
+                  <FaSnowflake /> Air conditioning
+                </Card.Title>
+                <Card.Text>
+                  Stay cool and comfortable with our air conditioning system.
                 </Card.Text>
               </Card.Body>
             </Card>
