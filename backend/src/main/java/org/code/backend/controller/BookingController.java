@@ -4,7 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.code.backend.exception.InvalidBookingRequestException;
 import org.code.backend.exception.ResourceNotFoundException;
 import org.code.backend.model.BookedRoom;
+import org.code.backend.model.Room;
 import org.code.backend.response.BookingResponse;
+import org.code.backend.response.RoomResponse;
 import org.code.backend.service.IBookingService;
 import org.code.backend.service.IRoomService;
 import org.springframework.http.HttpStatus;
@@ -59,6 +61,16 @@ public class BookingController {
     }
 
     private BookingResponse getBookingResponse(BookedRoom booking) {
-        
+            Room theRoom = roomService.getRoomById(booking.getRoom().getId()).get();
+        RoomResponse room = new RoomResponse(
+                theRoom.getId(),
+                theRoom.getRoomType(),
+                theRoom.getRoomPrice()
+        );
+        return new BookingResponse(
+                booking.getBookingId(), booking.getCheckInDate(),
+                booking.getCheckOutDate(), booking.getGuestFullName(), booking.getGuestEmail(), booking.getNumOfAdults(),
+                booking.getNumOfChildrens(), booking.getTotalNumOfGuests(), booking.getBookingConfirmationCode(), room
+        );
     }
 }
