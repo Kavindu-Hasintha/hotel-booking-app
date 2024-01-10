@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
   const checkInDate = moment(booking.checkInDate);
   const checkOutDate = moment(booking.checkOutDate);
-  const numOfDays = checkOutDate.diff(checkInDate, "days");
+  const numberOfDays = checkOutDate.diff(checkInDate, "days");
   const [isBookingConfirmed, setIsBookingConfirmed] = useState(false);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const navigate = useNavigate();
