@@ -1,7 +1,7 @@
+import React, { useState, useEffect } from "react";
 import moment from "moment";
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
   const checkInDate = moment(booking.checkInDate);
@@ -52,10 +52,10 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
         <div>
           <h5 className="hotel-color">Number of Guest</h5>
           <strong>
-            Adult{booking.numOfAdults > 1 ? "s" : ""} : {booking.numOfAdults}
+            Adult{booking.numOfAdults > 1 ? "s" : ""} : {booking.numberOfAdults}
           </strong>
           <strong>
-            <p>Children : {booking.numOfChildren}</p>
+            <p>Children : {booking.numberOfChildren}</p>
           </strong>
         </div>
 
