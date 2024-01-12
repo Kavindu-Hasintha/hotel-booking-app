@@ -54,7 +54,7 @@ const BookingsTable = ({ bookingInfo, handleBookingCancellation }) => {
           {filteredBookings.map((booking, index) => (
             <tr key={booking.id}>
               <td>{index + 1}</td>
-              <td>{booking.id}</td>
+              <td>{booking.bookingId}</td>
               <td>{booking.room.id}</td>
               <td>{booking.room.roomType}</td>
               <td>{booking.checkInDate}</td>
@@ -62,7 +62,7 @@ const BookingsTable = ({ bookingInfo, handleBookingCancellation }) => {
               <td>{booking.guestName}</td>
               <td>{booking.guestEmail}</td>
               <td>{booking.numOfAdults}</td>
-              <td>{booking.numOfChildren}</td>
+              <td>{booking.numOfChildrens}</td>
               <td>{booking.totalNumOfGuests}</td>
               <td>{booking.bookingConfirmationCode}</td>
               <td>
