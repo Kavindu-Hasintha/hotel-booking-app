@@ -10,10 +10,6 @@ import org.code.backend.repository.BookingRepository;
 
 import java.util.List;
 
-/**
- * @author Simpson Alfred
- */
-
 @Service
 @RequiredArgsConstructor
 public class BookingService implements IBookingService {
