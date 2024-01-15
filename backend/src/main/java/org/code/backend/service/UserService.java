@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.code.backend.model.User;
 import org.code.backend.repository.RoleRepository;
 import org.code.backend.repository.UserRepository;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
@@ -26,11 +27,11 @@ public class UserService implements IUserService {
 
     @Override
     public void deleteUser(String email) {
-
+        
     }
 
     @Override
     public User getUser(String email) {
-        return null;
+        return userRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("User not found."));
     }
 }
